@@ -44,5 +44,5 @@ We selected five different MRs:
 Here's an example demonstrating how MRs transform the source test case into its follow-up test cases.
 
 ```
-[![Examples of the Selected MRs Applied to an Image of Cat](/assets/img/shiprock.jpg "Shiprock")](https://markdown.com.cn)
+![Examples of the Selected MRs Applied to an Image of a Cat](https://github.com/GIST-NJU/CMPS/blob/main/mrs_example.png)
 ```
