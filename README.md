@@ -65,3 +65,22 @@ Run the following command to set up the same environment as the experiment based
 pip install -r requirements.txt
 ```
 
+### RQ1 (Failure-Triggering Capability)
+
+#### CMPS
+
+#### NSGA-II
+
+#### Random Selection (RS)
+Before running `random_selection.py`, you need to modify the paths in the code:
+
+* `dir_path`: The path where you store the experimental data (i.e., the `experimental_data` directory).
+* `output_path`: The path where you want to save the RS results.
+
+After modifying the paths, run the following command to obtain the RS selection results  and their TRC values for all experimental subjects across all cases：
+
+```
+python random_selection.py
+```
+
+We also store the original RS results from our experiment in the `RS` subfolder within the `results` directory. The storage format consists of index pairs `(i, j)`, where `i` represents the MR index and `j` represents the source test case index.
