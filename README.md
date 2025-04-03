@@ -69,9 +69,36 @@ pip install -r requirements.txt
 
 #### CMPS
 
+Before running `CMPS.py`, you need to modify the paths in the code:
+
+* `base_path`: The path where you store the datasets.
+* `dir_path`: The path where you store the experimental data (i.e., the `experimental_data` directory).
+* `output_path`: The path where you want to save the results of CMPS.
+
+After modifying the paths, run the following command to obtain the CMPS selection results  and their TRC values for all experimental subjects across all cases：
+
+```
+python CMPS.py
+```
+
+We also store the original CMPS results from our experiment in the `CMPS` subfolder within the `results` directory. The storage format is a dictionary, where the key is the image name of the selected source test case, and the value is a list that includes the metamorphic relation, the source test case label, and the follow-up test case label.
+
 #### NSGA-II
 
+For NSGA-II, we directly used the [replication package](https://doi.org/10.5281/zenodo.6389008) provided by the original paper and stored the raw results after execution in the `NSGA-II` subfolder under the `results` directory.
+Before running `NSGA-II.py`, you need to modify the paths in the code:
+
+* `res_path`: The path where you store the raw results of NSGA-II.
+* `dir_path`: The path where you store the experimental data (i.e., the `experimental_data` directory).
+
+Run the following command to obtain the TRCs of the NSGA-II's raw results :
+
+```
+python NSGA-II.py
+```
+
 #### Random Selection (RS)
+
 Before running `random_selection.py`, you need to modify the paths in the code:
 
 * `dir_path`: The path where you store the experimental data (i.e., the `experimental_data` directory).
@@ -84,3 +111,39 @@ python random_selection.py
 ```
 
 We also store the original RS results from our experiment in the `RS` subfolder within the `results` directory. The storage format consists of index pairs `(i, j)`, where `i` represents the MR index and `j` represents the source test case index.
+
+### RQ2 (Failure-Triggering Capability)
+
+#### CMPS
+
+After running `CMPS.py`, you can also get the FDR values of CMPS for all experimental subjects across all cases.
+
+#### NSGA-II
+
+After running `NSGA-II.py`, you can also get the FDR values of NSGA-II for all experimental subjects across all cases.
+
+#### Random Selection (RS)
+
+After running `random_selection.py`, you can also get the FDR values of RS for all experimental subjects across all cases.
+
+### RQ3 (Ablation Experiment)
+
+#### CMPS
+
+The TRC and FDR values can be obtained from RQ1 and RQ2.
+
+#### CMPS-NC
+
+Before running `CMPS-NC.py`, you need to modify the paths in the code:
+
+* `base_path`: The path where you store the datasets.
+* `dir_path`: The path where you store the experimental data (i.e., the `experimental_data` directory).
+* `output_path`: The path where you want to save the results of CMPS-NC.
+
+After modifying the paths, run the following command to obtain the CMPS-NC selection results  and their TRC and FDR values for all experimental subjects across all cases：
+
+```
+python CMPS-NC.py
+```
+
+We also store the original CMPS-NC results from our experiment in the `CMPS-NC` subfolder within the `results` directory. The storage format is a dictionary, where the key is the image name of the selected source test case, and the value is a list that includes the metamorphic relation, the source test case label, and the follow-up test case label.
