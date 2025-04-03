@@ -9,7 +9,30 @@ This repository contains the replication package for the paper "*Cluster-Based M
 The directory is structured as follows:
 
 ```
-
+.
+├── experimental_data
+│   ├── cifar10_resnet50
+│   ├── cifar10_vgg19
+│   ├── fashion_lenet1
+│   ├── fashion_lenet5
+│   ├── imagenet_googlenet
+│   └── imagenet_resnet
+├── requirements.txt
+├── results
+│   ├── CMPS
+│   ├── CMPS-NC
+│   ├── NSGA-II
+│   └── RS
+├── src
+│   ├── CMPS-NC.py
+│   ├── CMPS.py
+│   ├── NSGA-II.py
+│   ├── mr_5.py
+│   ├── my_dbscan.py
+│   └── random_selection.py
+└── subjects
+    ├── datasets
+    └── models
 ```
 
 ### Experimental Subjects
