@@ -98,7 +98,7 @@ Before running `CMPS.py`, you need to modify the paths in the code:
 * `dir_path`: The path where you store the experimental data (i.e., the `experimental_data` directory).
 * `output_path`: The path where you want to save the results of CMPS.
 
-After modifying the paths, run the following command to obtain the CMPS selection results  and their TRC values for all experimental subjects across all cases：
+After modifying the paths, run the following command to obtain the CMPS selection results  and their TRC values for all experimental subjects：
 
 ```
 python CMPS.py
@@ -127,7 +127,7 @@ Before running `random_selection.py`, you need to modify the paths in the code:
 * `dir_path`: The path where you store the experimental data (i.e., the `experimental_data` directory).
 * `output_path`: The path where you want to save the RS results.
 
-After modifying the paths, run the following command to obtain the RS selection results  and their TRC values for all experimental subjects across all cases：
+After modifying the paths, run the following command to obtain the RS selection results  and their TRC values for all experimental subjects：
 
 ```
 python random_selection.py
@@ -139,15 +139,15 @@ We also store the original RS results from our experiment in the `RS` subfolder 
 
 #### CMPS
 
-After running `CMPS.py`, you can also get the FDR values of CMPS for all experimental subjects across all cases.
+After running `CMPS.py`, you can also get the FDR values of CMPS for all experimental subjects.
 
 #### NSGA-II
 
-After running `NSGA-II.py`, you can also get the FDR values of NSGA-II for all experimental subjects across all cases.
+After running `NSGA-II.py`, you can also get the FDR values of NSGA-II for all experimental subjects.
 
 #### Random Selection (RS)
 
-After running `random_selection.py`, you can also get the FDR values of RS for all experimental subjects across all cases.
+After running `random_selection.py`, you can also get the FDR values of RS for all experimental subjects.
 
 ### RQ3 (Ablation Experiment)
 
