@@ -163,7 +163,7 @@ Before running `CMPS-NC.py`, you need to modify the paths in the code:
 * `dir_path`: The path where you store the experimental data (i.e., the `experimental_data` directory).
 * `output_path`: The path where you want to save the results of CMPS-NC.
 
-After modifying the paths, run the following command to obtain the CMPS-NC selection results  and their TRC and FDR values for all experimental subjects across all cases：
+After modifying the paths, run the following command to obtain the CMPS-NC selection results  and their TRC and FDR values for all experimental subjects：
 
 ```
 python CMPS-NC.py
