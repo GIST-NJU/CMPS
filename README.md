@@ -45,3 +45,23 @@ Here's an example demonstrating how MRs transform the source test case into its 
 
 ![Examples of the Selected MRs Applied to an Image of a Cat](mrs_example.png)
 
+The implementations of these five MRs are in the `mr_5.p` file under the `src` folder. You can also add new MRs based on your own needs.
+
+#### Experimental Data
+
+
+For easy replication, each subfolder in the `experimental_data` directory contains data for the corresponding experimental subjects, including the model's predicted labels for the source test cases, output probabilities of source test cases, and predicted labels for the follow-up test cases. This way, you can directly read the corresponding `.mat` files of each subject for processing without the need to load the models. Taking the `cifar10_vgg19` folder as an example, the results of each MR are stored separately in their respective `.mat` files, totaling five files.
+
+---
+
+## Getting Started
+
+Follow these steps to set up the environment and run the experiments.
+
+### Requirements
+Run the following command to set up the same environment as the experiment based on the provided `requirements.txt` file:
+
+```
+pip install -r requirements.txt
+```
+
