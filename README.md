@@ -43,7 +43,5 @@ We selected five different MRs:
 
 Here's an example demonstrating how MRs transform the source test case into its follow-up test cases.
 
-```
-![Examples of the Selected MRs Applied to an Image of a Cat](doc/mrs_example.png)
+![Examples of the Selected MRs Applied to an Image of a Cat](mrs_example.png)
 
-```
