@@ -108,7 +108,7 @@ We also store the original CMPS results from our experiment in the `CMPS` subfol
 
 #### NSGA-II
 
-For NSGA-II, we directly used the [replication package](https://doi.org/10.5281/zenodo.6389008) provided by the original paper and stored the raw results after execution in the `NSGA-II` subfolder under the `results` directory.
+For NSGA-II, we directly used the [replication package](https://doi.org/10.5281/zenodo.6389008) provided by the original paper "*Multi-Objective Metamorphic Follow-up Test Case Selection for Deep Learning Systems*" and stored the raw results after execution in the `NSGA-II` subfolder under the `results` directory.
 Before running `NSGA-II.py`, you need to modify the paths in the code:
 
 * `res_path`: The path where you store the raw results of NSGA-II.
