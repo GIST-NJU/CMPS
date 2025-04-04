@@ -113,12 +113,14 @@ Before running `NSGA-II.py`, you need to modify the paths in the code:
 
 * `res_path`: The path where you store the raw results of NSGA-II.
 * `dir_path`: The path where you store the experimental data (i.e., the `experimental_data` directory).
+* `out_path`: The path where you store the random selection results of NSGA-II.
 
 Run the following command to obtain the TRCs of the NSGA-II's raw results :
 
 ```
 python NSGA-II.py
 ```
+We also store the original random selection results of NSGA-II from our experiment in the `results` subfolder within the `MSGA-II` directory. The storage format is a list of length 10, where each element is a list of length 5, corresponding to the indices of source test cases selected for each of the five MRs.
 
 #### Random Selection (RS)
 
