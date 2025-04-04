@@ -117,7 +117,7 @@ def CMPS(ori_mdata,mr_mdata,budget):
     image_uncertainty = dict()
     image_cluster = {}
     for index in range(len(img_paths)):
-        image_cluster[img_paths[index]] = dbscan_labels[index]  # 图像路径-图像聚类num
+        image_cluster[img_paths[index]] = dbscan_labels[index]
         imgpath_pred_dict[img_paths[index]] = predictions[index]
         ori_label = ori_mdata[1][index]
         imgpath_orilabel_dict[img_paths[index]] = ori_label
@@ -170,7 +170,7 @@ def CMPS(ori_mdata,mr_mdata,budget):
             for mr in mr_list2:
                 img = img_arrays[ori_mdata[0].index(img_path)]
                 image_pil = Image.fromarray(img)
-                followup_img = mr_5.test_mrs(image_pil, mr)
+                followup_img = mr_5.test_mrs(image_pil, mr) # the valid has been checked by SSIM and mannual analysis in our experiment, you can directly compute the euclidean_distance
                 followup_img_array = image.img_to_array(followup_img)
                 followup_img_array_list.append(followup_img_array)
 
@@ -192,24 +192,20 @@ def CMPS(ori_mdata,mr_mdata,budget):
             eu_distance = []
 
             for mr in mr_list2:
-                # fp图像的格式转换
                 followup_img = mr_5.test_mrs(img, mr)
                 followup_img_array = image.img_to_array(followup_img)
                 followup_img_array_list.append(followup_img_array)
-                # 计算欧氏距离
                 euclidean_distance = euclidean(ori_img_array.flatten(), followup_img_array.flatten())
                 eu_distance.append(euclidean_distance)
 
             max_dis = max(eu_distance)
             max_index = eu_distance.index(max_dis)
-            # 得到eud最大的fp的标签
             f_label = mr_mdata[max_index][img_path][0]
 
-        if ori_label == f_label:  # 如果距离最大的都出错，我们认为其他距离也很大概率不会出错，不选了
+        if ori_label == f_label:
             model_run_times += 1
         else:
             # print(ori_label, f_label)
-            # 最大距离出错了，那就选择
             model_run_times += 1
             error_num += 1
             if img_path not in fault_record:
