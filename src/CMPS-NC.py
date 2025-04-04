@@ -170,7 +170,7 @@ def CMPS(ori_mdata,mr_mdata,budget):
             for mr in mr_list2:
                 img = img_arrays[ori_mdata[0].index(img_path)]
                 image_pil = Image.fromarray(img)
-                followup_img = mr_5.test_mrs(image_pil, mr) # the valid has been checked by SSIM and mannual analysis in our experiment, you can directly compute the euclidean_distance
+                followup_img = mr_5.test_mrs(image_pil, mr) # the valid has been checked by SSIM and manual analysis in our experiment, you can directly compute the euclidean_distance
                 followup_img_array = image.img_to_array(followup_img)
                 followup_img_array_list.append(followup_img_array)
 
