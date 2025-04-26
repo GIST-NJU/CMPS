@@ -94,10 +94,10 @@ def data_process(path):
 def CMPS(ori_mdata,mr_mdata,budget):
     # clustering
     predictions = ori_mdata[2]
-    if dataset == 'cifar10':
-        n=10
-    else:
+    if dataset == 'imagenet':
         n=1000
+    else:
+        n=10
     predictions = np.array([np.pad(pred, (0, n - len(pred)), 'constant') for pred in predictions])
     scaler = StandardScaler()
     predictions_scaled = scaler.fit_transform(predictions)
@@ -354,4 +354,3 @@ for dataset in datasets:
             for budget in [500,1000]:
                 print(budget)
                 CMPS(ori_mdata, mr_mdata, budget)
-
