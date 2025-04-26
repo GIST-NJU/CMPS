@@ -104,7 +104,7 @@ def CMPS(ori_mdata,mr_mdata,budget):
     dbscan_labels = my_dbscan.dbscan(predictions_scaled, eps=0.15, min_samples=1)
 
     cluster_counts = Counter(dbscan_labels)
-    cluster_size = {}  # 计算每个聚类中的总数
+    cluster_size = {}  # counter the number of each cluster
     for cluster_label, count in cluster_counts.items():
         cluster_size[cluster_label] = count
     image_cluster_count = {}

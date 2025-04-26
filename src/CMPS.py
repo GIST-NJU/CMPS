@@ -104,7 +104,7 @@ def CMPS(ori_mdata,mr_mdata,budget):
     dbscan_labels = my_dbscan.dbscan(predictions_scaled, eps=0.15, min_samples=1)
 
     cluster_counts = Counter(dbscan_labels)
-    cluster_size = {}  # 计算每个聚类中的总数
+    cluster_size = {}  # counter the number of each cluster
     for cluster_label, count in cluster_counts.items():
         cluster_size[cluster_label] = count
     image_cluster_count = {}
@@ -117,7 +117,7 @@ def CMPS(ori_mdata,mr_mdata,budget):
     image_uncertainty = dict()
     image_cluster = {}
     for index in range(len(img_paths)):
-        image_cluster[img_paths[index]] = dbscan_labels[index]  # 图像路径-图像聚类num
+        image_cluster[img_paths[index]] = dbscan_labels[index]  # image_path-number of clusters
         imgpath_pred_dict[img_paths[index]] = predictions[index]
         ori_label = ori_mdata[1][index]
         imgpath_orilabel_dict[img_paths[index]] = ori_label
